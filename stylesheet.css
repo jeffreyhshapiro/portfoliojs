@@ -9,10 +9,17 @@ body {
 #style-deeply-nested-element {
 	font-weight: bold; 
 }
-nav > a:hover {
-	font-size: 1.5em;
+
+.icon_resize {
+	width: 32px;
+	height: 32px:;
 }
 
 .center {
 	text-align: center;
+}
+
+.secret-message:hover {
+	display: block;
+	font-size: 1.5em
 }
