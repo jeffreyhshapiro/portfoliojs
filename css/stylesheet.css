@@ -1,0 +1,20 @@
+body {
+  background-color: #e3f2fd;
+}
+
+nav .brand-logo {
+  font-size: 1.5em;
+  padding-left: 10px;
+}
+
+#headshot-photo{
+  max-height: 400px;
+  max-width: 400px;
+  height: auto;
+  width: auto;
+}
+
+#filler-text {
+  text-align: left;
+  padding-left: 40px;
+}
