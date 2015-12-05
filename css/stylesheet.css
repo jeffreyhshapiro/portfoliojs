@@ -2,6 +2,10 @@ body {
   background-color: #e3f2fd;
 }
 
+nav{
+  color: #4682B4;
+}
+
 nav .brand-logo {
   font-size: 1.5em;
   padding-left: 10px;
