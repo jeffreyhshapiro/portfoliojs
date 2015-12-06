@@ -8,6 +8,7 @@ $(document).ready(function(){
     $("#introduction").hide();
     $("#skills").hide();
     $("#dev-activity").hide();
+    $("#contact-me").hide();
     $("#about-me").show();
   });
 
@@ -15,6 +16,7 @@ $(document).ready(function(){
     $("#introduction").hide();
     $("#about-me").hide();
     $("#dev-activity").hide();
+    $("#contact-me").hide();
     $("#skills").show();
   })
 
@@ -22,14 +24,26 @@ $(document).ready(function(){
     $("#about-me").hide();
     $("#skills").hide();
     $("#dev-activity").hide();
+    $("#contact-me").hide();
     $("#introduction").show();
   });
 
-  $("#nav-dev-activity").on("click"), function(){
+  $("#nav-dev-activity").on("click", function(){
     $("#about-me").hide();
     $("#skills").hide();
     $("#introduction").hide();
+    $("#contact-me").hide();
     $("#dev-activity").show();
-  }
+  });
+
+  $("#nav-contact-me").on("click", function(){
+    $("#about-me").hide();
+    $("#skills").hide();
+    $("#introduction").hide();
+    $("#dev-activity").hide();
+    $("#contact-me").show();
+  });
+
+
 
 });
