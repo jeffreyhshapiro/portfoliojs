@@ -1,11 +1,12 @@
 $(document).ready(function(){
+  //Get github repo name
   $.ajax({
     type: "GET",
     url: "https://api.github.com/users/jeffreyhshapiro/repos",
     success: function(repos){
-      console.log(repos);
       for (i = 0; i < repos.length; i++){
-        $(".repos-table").append("<p>"+repos[i].name+"</p>");
+        var newListItem = buildListGroup(repos[i])
+        $(".repos-table").append(newListItem);
       };
     },
     error: function(jqXHR, textStatus, errorThrown){
@@ -16,5 +17,16 @@ $(document).ready(function(){
 
   })
 
-})
+  function buildListGroup(repoData){
+    var commitsApiUrl = "https://api.github.com/repos/";
+    commitsApiUrl += repoData.full_name + "/commits";
+
+    var newLink = $("<a>")
+      .attr("href", commitsApiUrl);
+      .append(repoData.full_name);
+    return newLink;
+
+  };
+
+});
 
