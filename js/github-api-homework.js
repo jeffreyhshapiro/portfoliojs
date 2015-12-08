@@ -6,8 +6,8 @@ $(document).ready(function(){
     success: function(repos){
       for (i = 0; i < repos.length; i++){
         var newListItem = buildListGroup(repos[i])
-        $(".repos-table").append(newListItem);
-      };
+        $(".collection").append(newListItem);
+      }
     },
     error: function(jqXHR, textStatus, errorThrown){
       console.log(jqXHR);
@@ -15,18 +15,20 @@ $(document).ready(function(){
       console.log(errorThrown);
     }
 
-  })
+  });
 
   function buildListGroup(repoData){
     var commitsApiUrl = "https://api.github.com/repos/";
     commitsApiUrl += repoData.full_name + "/commits";
 
     var newLink = $("<a>")
-      .attr("href", commitsApiUrl);
+      .attr("href", commitsApiUrl)
+      .addClass("collection-item")
       .append(repoData.full_name);
+
     return newLink;
 
-  };
+  }
 
 });
 
