@@ -25,6 +25,7 @@ $(document).ready(function(){
       var messageTd = $("<td>").append(commitData.commit.message);
       var authorTd = $("<td>").append(commitData.author.login);
       var dateTd = $("<td>").append(commitData.commit.author.date);
+      debugger;
 
       return $("<tr>").append(messageTd)
               .append(authorTd)
